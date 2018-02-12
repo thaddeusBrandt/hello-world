@@ -2,7 +2,11 @@
 <body>
 This is the body
 
-<a id="liveagent_button_online_5731I000000Dp6Q" href="javascript://Chat" style="display: block;" onclick="liveagent.startChat('5731I000000Dp6Q')">Start Live Agent</a>
+<a id="liveagent_button_online_5731I000000Dp6Q" href="javascript://Chat" style="display: block;" onclick="liveagent.startChat('5731I000000Dp6Q')">Start Chat</a><div id="liveagent_button_offline_5731I000000Dp6Q" style="display: block;">Chat Not Available</div><script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('5731I000000Dp6Q', document.getElementById('liveagent_button_online_5731I000000Dp6Q'));
+liveagent.showWhenOffline('5731I000000Dp6Q', document.getElementById('liveagent_button_offline_5731I000000Dp6Q'));
+});</script>
 
 <script type='text/javascript' src='https://c.la2-c1-iad.salesforceliveagent.com/content/g/js/42.0/deployment.js'></script>
 <script type='text/javascript'>
