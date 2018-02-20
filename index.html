@@ -32,14 +32,14 @@ liveagent.addCustomDetail('Phone Number', '415-555-1212');
 /* An auto-query that searches Contacts whose Email field exactly matches 'jane@doe.com'. If no result is found, it will create a Contact record with the email, first name, last name, and phone number fields set to the custom detail values. */
 liveagent.findOrCreate('Contact').map('Email','Contact E-mail',true,true,true).map('FirstName','First Name',false,false,true).map('LastName','Last Name',false,false,true).map('Phone','Phone Number',false,false,true);
 
-liveagent.findOrCreate('Contact').saveToTranscript('ContactId').showOnCreate();
+liveagent.findOrCreate('Contact').saveToTranscript('ContactId');
 
 liveagent.addCustomDetail('Case Subject','Chat Question over IRA');
 
 /* Creates a custom detail called Case Status and sets the value to 'New' */
 liveagent.addCustomDetail('Case Status','New');
 
-liveagent.findOrCreate('Case').map('ContactId','Contact',false,false,true).map('Subject','Case Subject',false,false,true).map('Status','Case Status',false,false,true).saveToTranscript('CaseId').showOnCreate();
+liveagent.findOrCreate('Case').map('ContactId','Contact',true,false,true).map('Subject','Case Subject',false,false,true).map('Status','Case Status',false,false,true).saveToTranscript('CaseId').showOnCreate();
 
 /* Sets the display name of the visitor in the agent console when engaged in a chat */
 liveagent.setName('Jane Doe');
